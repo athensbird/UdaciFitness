@@ -1,0 +1,3 @@
+rootProject.name = 'UdaciFitness'
+
+include ':app'
