@@ -4,7 +4,7 @@ import { purple } from '../utils/colors';
 
 export default function DateHeader({ date }) {
   return (
-    <Text styles={{color: purple, fontSize: 25}}>
+    <Text style={{color: purple, fontSize: 25}}>
       {date}
     </Text>
   );
