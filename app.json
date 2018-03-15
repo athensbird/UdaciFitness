@@ -2,6 +2,21 @@
   "name": "UdaciFitness",
   "displayName": "UdaciFitness",
   "expo": {
-    "sdkVersion": "25.0.0"
+    "sdkVersion": "25.0.0",
+    "orientation": "portrait",
+    "name": "UdaciFitness",
+    "description": "Triathlon Training App",
+    "slug": "UdaciFitness",
+    "version": "0.1",
+    "icon": "https://tylermcginnis.com/udacifitness-512.png",
+    "notification": {
+      "icon": "https://tylermcginnis.com/udacifitness-45.png"
+    },
+    "ios": {
+      "bundleIdentifier": "org.udacifitness.exp"
+    },
+    "android": {
+      "package": "org.udacifitness.exp"
+    }
   }
 }
