@@ -43,7 +43,7 @@ const Tabs = TabNavigator({
     screen: AddEntry,
     navigationOptions: {
       tabBarLabel: 'Add Entry',
-      tabBarIcon: ({ tintColor }) => <Ionicons name='plus-square' size={30} color={tintColor} />
+      tabBarIcon: ({ tintColor }) => <FontAwesome name='plus-square' size={30} color={tintColor} />
     }
   }
 }, {
@@ -84,7 +84,7 @@ export default class App extends React.Component {
     return (
       <Provider store={createStore(reducer)}>
         <View style={{flex: 1}}>
-          <UdaciStatusBar backgroundColor={purple} barstyle='light-content' />
+          <UdaciStatusBar backgroundColor={purple} barStyle='light-content' />
           <MainNavigator />
         </View>
       </Provider>

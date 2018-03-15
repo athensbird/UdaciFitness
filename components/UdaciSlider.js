@@ -9,7 +9,7 @@ export default function UdaciSlider( { max, unit, step, value, onChange } ) {
         style={{flex: 1}}
         step={step}
         value={value}
-        maximamValue={max}
+        maximumValue={max}
         minimumValue={0}
         onValueChange={onChange}
       />

@@ -11,6 +11,7 @@ import { submitEntry, removeEntry } from '../utils/api';
 import { connect } from 'react-redux';
 import { addEntry } from '../actions';
 import { white, purple } from '../utils/colors';
+import { NavigationActions } from 'react-navigation';
 
 const styles = StyleSheet.create({
   container: {
@@ -67,11 +68,11 @@ function SubmitBtn({ onPress }) {
 }
 
 class AddEntry extends React.Component {
-  state ={
+  state = {
     run: 0,
     bike: 0,
     swim: 0,
-    sleep: 10,
+    sleep: 0,
     eat: 0
   }
   increment = (metric) => {
@@ -114,6 +115,8 @@ class AddEntry extends React.Component {
       eat: 0
     }));
 
+    this.toHome();
+
     submitEntry({ key, entry });
   }
   reset = () => {
@@ -121,6 +124,13 @@ class AddEntry extends React.Component {
 
     this.props.dispatch(addEntry({
       [key]: getDailyReminderValue()
+    }));
+
+    this.toHome();
+  }
+  toHome = () =>{
+    this.props.navigation.dispatch(NavigationActions.back({
+      key: 'AddEntry'
     }))
   }
   render() {
@@ -133,7 +143,7 @@ class AddEntry extends React.Component {
             size={100}
           />
           <Text>You are logged in</Text>
-          <TestButton style={{padding: 10}}onPress={this.reset}>
+          <TestButton style={{padding: 10}} onPress={this.reset}>
             Reset
           </TestButton>
         </View>
